@@ -29,3 +29,8 @@ const server = app.listen(port, listening);
 function listening() {
     console.log(`server running on http://localhost:${port}`);
 }
+
+// Create GET route for url /data
+app.get('/data', function (request, response) {
+    response.send(projectData);
+})
