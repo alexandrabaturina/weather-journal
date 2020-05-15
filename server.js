@@ -34,3 +34,19 @@ function listening() {
 app.get('/data', function (request, response) {
     response.send(projectData);
 })
+
+// Create POST route
+
+const data = []
+
+app.post('/addData', addData);
+
+function addData(request, response) {
+    let data = request.body;
+    projectData['temperature'] = data.temperature;
+    projectData['date'] = data.date;
+    projectData['userResoponse'] = data.userResponse;
+    response.send(projectData);
+    console.log(projectData);
+}
+
