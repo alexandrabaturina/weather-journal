@@ -43,9 +43,9 @@ app.post('/addData', addData);
 
 function addData(request, response) {
     let data = request.body;
-    projectData['temperature'] = data.temperature;
     projectData['date'] = data.date;
-    projectData['userResoponse'] = data.userResponse;
+    projectData['temp'] = data.temp;
+    projectData['content'] = data.content;
     response.send(projectData);
     console.log(projectData);
 }
