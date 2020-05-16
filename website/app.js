@@ -1,11 +1,20 @@
 /* Global Variables */
 
-//Base URL and API for Open Weather Map API call
+// Base URL and API for Open Weather Map API call
 const baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
 const apiKey = '&APPID=dfd91166f2efa827b554cd87b63c1c8d';
 
-const zip = '98109';
-targetURL = baseURL + zip + apiKey;
+
+// Add event listener to Generate button
+document.getElementById('generate').addEventListener('click', returnDataFromAPI);
+
+// Return data from the exernal API
+function returnDataFromAPI(event) {
+    const zipCode = document.getElementById('zip').value;
+    const targetURL = baseURL + zipCode + apiKey;
+    retrieveData(targetURL);
+}
+
 
 const retrieveData = async (url) => {
     const request = await fetch(url);
@@ -20,7 +29,6 @@ const retrieveData = async (url) => {
     }
 }
 
-retrieveData(targetURL);
 
 const postData = async (url = '', data = {}) => {
     console.log(data);
@@ -42,12 +50,7 @@ const postData = async (url = '', data = {}) => {
         console.log("error", error);
     }
 }
-// Fake data to test addData function
-// newData = {
-//     temperature: 25,
-//     date: '5/15/20',
-//     userResponse: 'Feeling good'
-// }
+
 
 // postData('/addData', newData);
 
