@@ -30,15 +30,13 @@ function listening() {
     console.log(`server running on http://localhost:${port}`);
 }
 
-// Create GET route for url /data
-app.get('/data', function (request, response) {
+// Create GET route for url /all
+app.get('/all', function (request, response) {
     response.send(projectData);
 })
 
 // Create POST route
-
 const data = []
-
 app.post('/addData', addData);
 
 function addData(request, response) {
@@ -47,6 +45,4 @@ function addData(request, response) {
     projectData['temp'] = data.temp;
     projectData['content'] = data.content;
     response.send(projectData);
-    console.log(projectData);
 }
-

@@ -18,9 +18,13 @@ function generateData(event) {
     const content = document.getElementById('feelings').value;
     retrieveData(targetURL)
         .then(function (jsonData) {
-            // console.log(`{ date: ${currentDate}, temp: ${jsonData.main.temp}, content: ${content} }`)
             postData('/addData', { date: currentDate, temp: jsonData.main.temp, content: content });
+            return { date: currentDate, temp: jsonData.main.temp, content: content };
         })
+        .then(function () {
+            updateUI()
+        }
+        )
 }
 
 // Return JSON data from the exernal API
@@ -29,39 +33,42 @@ const retrieveData = async (url) => {
     try {
         // Transform into JSON
         const jsonData = await request.json()
-        console.log('Data from json');
-        console.log(jsonData);
         return jsonData;
     }
     catch (error) {
         console.log("error", error);
-        // appropriately handle the error
     }
 }
 
-
+// Add data to the project endpoint using POST
 const postData = async (url = '', data = {}) => {
-    console.log(data);
     const response = await fetch(url, {
         method: 'POST',
         credentials: 'same-origin',
         headers: {
             'Content-Type': 'application/json',
         },
-        // Body data type must match "Content-Type" header        
         body: JSON.stringify(data),
     });
 
     try {
         const newData = await response.json();
-        console.log(newData);
         return newData;
     } catch (error) {
         console.log("error", error);
     }
 }
 
+// Update UI dynamically
+const updateUI = async () => {
+    const request = await fetch('/all');
+    try {
+        const allData = await request.json();
+        document.getElementById('date').innerHTML = allData.date;
+        document.getElementById('temp').innerHTML = allData.temp;
+        document.getElementById('content').innerHTML = allData.content;
 
-// postData('/addData', newData);
-
-
+    } catch (error) {
+        console.log("error", error);
+    }
+}
