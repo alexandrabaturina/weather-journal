@@ -42,6 +42,10 @@ Steps to run **Weather Journal** from the local repo.
 $ node server.js
 ```
 4. Enter ```http://localhost:3030``` in your browser.
+
+To use your own OpenWeatherMap API key,
+1. Create an account on [https://openweathermap.org/api](https://openweathermap.org/api).
+2. In *app.js*, save your key in ```apiKey``` constant.
 ## Dependencies
 Cool tech stuff used in this project.
 * Node.js
