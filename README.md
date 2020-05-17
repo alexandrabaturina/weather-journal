@@ -2,8 +2,6 @@
 ## Overview
 **Weather Journal** is an app with asynchronous JavaScript which creates a weather record for user based on their input and data from [OpenWeatherMap API](https://openweathermap.org/api).
 
-The app is built as third project of Udacity [Front End Web Developer](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011) nanodegree program.
-## Features
 The **Weather Journal** is one-page app with the following structure.
 ```sh
 website/
@@ -16,6 +14,8 @@ website/
   index.html
 server.js
 ```
+The app is built as third project of Udacity [Front End Web Developer](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011) nanodegree program.
+## Features
 The app has the following features.
 * Local server (*server.js*) runs on ```port 3030```.
 * Data is retrieved from external [OpenWeatherMap API](https://openweathermap.org/current#zip) in ```JSON``` format.
