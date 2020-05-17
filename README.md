@@ -34,11 +34,14 @@ $ npm install cors
 $ npm install body-parser
 ```
 ### Running Locally 
-First, start the server by typing the following command in the command line.
+Steps to run **Weather Journal** from the local repo.
+1. Clone this repository.
+2. cd into project directory.
+3. Start the local server from command line.
 ```sh
 $ node server.js
 ```
-Then, enter ```http://localhost:3030``` in your browser.
+4. Enter ```http://localhost:3030``` in your browser.
 ## Dependencies
 Cool tech stuff used in this project.
 * Node.js
