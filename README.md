@@ -18,6 +18,13 @@ server.js
 ```
 ## Getting Started
 ### Prerequisites
+1. Download [Node.js](https://nodejs.org/en/download/).
+2. Install the following packages using NPM.
+```sh
+$ npm install express
+$ npm install cors
+$ npm install body-parser
+```
 ### Running Locally 
 First, start the server by typing the following command in the command line.
 ```sh
