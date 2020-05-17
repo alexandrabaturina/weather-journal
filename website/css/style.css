@@ -5,12 +5,23 @@ body{
 
 #app{
     display: grid;
-    grid-auto-rows: minmax(150px, auto);
+    /* border: 2px solid white; */
+    /* grid-auto-rows: 20px, minmax(150px, auto); */
+    grid-template-rows: 100px 200px 300px 300px;
+    grid-template-columns: 70%;
+    grid-template-areas:
+     "header"
+     "zip"
+     "feel"
+     "entry";
     /* grid-template-columns:  */
+    /* display: flex; */
     height:100vh;
-    background: #f23557;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
     color: #f0d43a;
     justify-content: center;
+
     grid-gap: 1em;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
@@ -18,11 +29,10 @@ body{
 
 .holder{
 
+
 }
 
-.entry{
-    background: rgba(59, 74, 107, .4);
-}
+
 
 #entryHolder{
 
@@ -41,8 +51,25 @@ body{
 }
 
 .headline {
-
+    grid-area: header;
 }
+
+.zip {
+    grid-area: zip;
+}
+
+.feel {
+    grid-area: feel;
+    display: flex;
+    flex-direction: column;
+}
+
+.entry {
+    grid-area: entry;
+    background: rgba(59, 74, 107, .4);
+}
+
+
 .title{
 
 }
