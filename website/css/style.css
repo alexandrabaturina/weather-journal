@@ -5,74 +5,75 @@ body{
 
 #app{
     display: grid;
-    /* border: 2px solid white; */
-    /* grid-auto-rows: 20px, minmax(150px, auto); */
-    grid-template-rows: 100px 200px 300px 300px;
+    grid-template-rows: 150px 120px 300px 250px;
     grid-template-columns: 70%;
     grid-template-areas:
      "header"
      "zip"
      "feel"
      "entry";
-    /* grid-template-columns:  */
-    /* display: flex; */
     height:100vh;
     background-image: url('../img/background.jpg');
     background-size: cover;
-    color: #f0d43a;
+    color: black;
     justify-content: center;
-
     grid-gap: 1em;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }
 
 .holder{
-
-
+    justify-self: center;
 }
-
-
 
 #entryHolder{
-
-}
-
-#date{
-
-}
-
-#temp{
-
-}
-
-#content{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 10px;
 
 }
 
 .headline {
+    height: 50px;
     grid-area: header;
+    padding-top: 50px;
+    font-size: 3em;
+    font-weight: 700;
 }
 
 .zip {
+    /* padding-top: 10px; */
     grid-area: zip;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#zip {
+    padding-left: 10px;
 }
 
 .feel {
     grid-area: feel;
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 
 .entry {
     grid-area: entry;
+    width: 100%;
+    font-size: 1.5em;
     background: rgba(59, 74, 107, .4);
+    text-align: center;
+    color: #f0d43a;
 }
 
-
-.title{
-
+.title {
+    align-items: center;
 }
+
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
 label{
@@ -86,29 +87,31 @@ input{
     width: 320px;
     background:#22b2da;
     color: #f0d43a;
-    font-size: 20px;
+    font-size: 1.5em;
     font-family: 'Oswald', sans-serif;
     border: none;
 }
 
 button{
-    width: 400px;
+    width: 200px;
+    margin-top: 10px;
+    border-radius: 5%;
     height: 100px;
     background: #3b4a6b;
     color: #f0d43a;
-    font-size: 26px;
+    font-size: 2em;
+    padding-left: 10px;
     font-family: 'Oswald', sans-serif;
     border: none;
     box-shadow: 2px 4px 5px #444;
 }
-h1{
-    font-size: 36px;
-}
 
 textarea{
     background:#22b2da;
+    width: 320px;
     color: #f0d43a;
-    font-size: 20px;
+    font-size: 1.5em;
+    padding-left: 10px;
     font-family: 'Oswald', sans-serif;
 }
 /* Reset style for HTML element on active to have no border*/
@@ -128,11 +131,20 @@ button:focus {
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: #f0d43a;
     font-family: 'Oswald', sans-serif;
-
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
     color: #f0d43a;
     font-family: 'Oswald', sans-serif;
-
 } 
+
+/* @media (min-width: 769px) {
+    #app {
+        grid-template-rows: 150px 300px 250px;
+        grid-template-columns: 40% 40%;
+        grid-template-areas:
+        "header header"
+        "zip feel"
+        "entry entry";
+    }
+} */
