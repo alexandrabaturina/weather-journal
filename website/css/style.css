@@ -5,8 +5,8 @@ body{
 
 #app{
     display: grid;
-    grid-template-rows: 150px 120px 300px 250px;
-    grid-template-columns: 70%;
+    grid-template-rows: 70px 100px 250px 200px;
+    grid-template-columns: 90%;
     grid-template-areas:
      "header"
      "zip"
@@ -31,14 +31,12 @@ body{
     flex-direction: column;
     padding-top: 20px;
     padding-left: 10px;
-
 }
 
 .headline {
-    height: 50px;
     grid-area: header;
-    padding-top: 50px;
-    font-size: 3em;
+    padding-top: 30px;
+    font-size: 1.5em;
     font-weight: 700;
 }
 
@@ -64,7 +62,7 @@ body{
 .entry {
     grid-area: entry;
     width: 100%;
-    font-size: 1.5em;
+    font-size: 1.1em;
     background: rgba(59, 74, 107, .4);
     text-align: center;
     color: #f0d43a;
@@ -78,16 +76,16 @@ body{
 /*  Basic Styling To Override Default For Basic HTML Elements */
 label{
     display:block;
-    font-size: 27px;
+    font-size: 1.1em;
 }
 
 input{
     display:block;
-    height: 60px;
-    width: 320px;
+    height: 70px;
+    width: 250px;
     background:#22b2da;
     color: #f0d43a;
-    font-size: 1.5em;
+    font-size: 1.1em;
     font-family: 'Oswald', sans-serif;
     border: none;
 }
@@ -96,10 +94,10 @@ button{
     width: 200px;
     margin-top: 10px;
     border-radius: 5%;
-    height: 100px;
+    height: 70px;
     background: #3b4a6b;
     color: #f0d43a;
-    font-size: 2em;
+    font-size: 1.2em;
     padding-left: 10px;
     font-family: 'Oswald', sans-serif;
     border: none;
@@ -108,9 +106,9 @@ button{
 
 textarea{
     background:#22b2da;
-    width: 320px;
+    width: 250px;
     color: #f0d43a;
-    font-size: 1.5em;
+    font-size: 1.1em;
     padding-left: 10px;
     font-family: 'Oswald', sans-serif;
 }
@@ -138,13 +136,40 @@ button:focus {
     font-family: 'Oswald', sans-serif;
 } 
 
-/* @media (min-width: 769px) {
+@media (min-width: 769px) {
     #app {
-        grid-template-rows: 150px 300px 250px;
+        grid-template-rows: 150px 200px 250px;
         grid-template-columns: 40% 40%;
         grid-template-areas:
         "header header"
         "zip feel"
         "entry entry";
     }
-} */
+
+    input,
+    textarea {
+        width: 320px;
+        height: 70px;
+    }
+
+    #zip,
+    button,
+    .entry,
+    textarea,
+    label {
+        font-size: 1.5em;
+    }
+
+    .headline {
+        padding-top: 50px;
+        font-size: 3em;
+    }
+        
+    #zip {
+        padding-left: 10px;
+    }
+
+    .entry {
+        font-size: 1.5em;
+    }
+}
