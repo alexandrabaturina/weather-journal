@@ -1,0 +1,20 @@
+{
+  "name": "weather-journal-app",
+  "version": "1.0.0",
+  "description": "**Weather Journal** is an app with asynchronous JavaScript which creates a weather record for user based on their input and data from [OpenWeatherMap API](https://openweathermap.org/api).",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandrabaturina/weather-journal.git"
+  },
+  "author": "Alexandra Baturina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandrabaturina/weather-journal/issues"
+  },
+  "homepage": "https://github.com/alexandrabaturina/weather-journal#readme"
+}
