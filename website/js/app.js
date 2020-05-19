@@ -14,7 +14,7 @@ document.getElementById('generate').addEventListener('click', generateData);
 
 function generateData(event) {
     const zipCode = document.getElementById('zip').value;
-    const targetURL = baseURL + zipCode + '&appid=' + apiKey;
+    const targetURL = baseURL + zipCode + '&appid=' + apiKey + '&units=imperial';
     const content = document.getElementById('feelings').value;
     retrieveData(targetURL)
         .then(function (jsonData) {
