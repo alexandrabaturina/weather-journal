@@ -2,7 +2,7 @@
 
 // Base URL and API for Open Weather Map API call
 const baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
-const apiKey = 'dfd91166f2efa827b554cd87b63c1c8d';
+const apiKey = '&appid=9f15e45060210ec849a698b3298f0bed&units=imperial';
 
 // Create a new date instance dynamically with JS
 let d = new Date();
@@ -14,7 +14,7 @@ document.getElementById('generate').addEventListener('click', generateData);
 
 function generateData(event) {
     const zipCode = document.getElementById('zip').value;
-    const targetURL = baseURL + zipCode + '&appid=' + apiKey + '&units=imperial';
+    const targetURL = baseURL + zipCode + apiKey;
     const content = document.getElementById('feelings').value;
     retrieveData(targetURL)
         .then(function (jsonData) {
