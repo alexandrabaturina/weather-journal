@@ -11,30 +11,31 @@
 
 <body>
   <div id="app">
-    <div class="holder headline">
-      Weather Journal App
+
+    <div class="headline">
+      Weather Journal
     </div>
-    <div class="holder zip">
-      <label for="zip">Enter Zipcode here</label>
-      <input type="text" id="zip" placeholder="Enter zip code here">
-    </div>
-    <div class="holder feel">
-      <label for="feelings">How are you feeling today?</label>
-      <textarea class="myInput" id="feelings" placeholder="Enter your feelings here" rows="2" cols="50"></textarea>
+
+    <div class="user-data">
+      <input type="text" id="zip" placeholder="Enter your zip code...">
+      <div class="zip-error"></div>
+      <textarea class="myInput" id="feelings" placeholder="How are you feeling today?" rows="2" cols="50"></textarea>
       <button id="generate" type="submit"> Generate </button>
     </div>
-    <div class="holder entry">
-      <div class="title">Most Recent Entry</div>
-      <div id="entryHolder">
+
+    <div class="entry">
+      <div id="entry-header">Most Recent Entry</div>
+      <div id="entry-holder">
         <div id="date"></div>
         <div id="temp"></div>
         <div id="content"></div>
       </div>
     </div>
+
   </div>
+
   <script src="js/app.js" type="text/javascript"></script>
 
 </body>
 
 </html>
-© 2020 GitHub, Inc.
