@@ -36,5 +36,6 @@ function addData(request, response) {
     projectData['date'] = data.date;
     projectData['temp'] = data.temp;
     projectData['content'] = data.content;
+    projectData['city'] = data.city;
     response.send(projectData);
 }
